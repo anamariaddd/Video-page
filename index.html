@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Video4</title>
   <style>
     body {
@@ -11,17 +12,20 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
+      overflow: hidden;
     }
     video {
-      max-width: 100%;
-      max-height: 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: transparent;
     }
   </style>
 </head>
 <body>
-  <video controls autoplay>
+  <video controls preload="metadata" playsinline>
     <source src="Video4.mp4" type="video/mp4">
-    Your browser does not support the video tag.
+    Your browser doesn’t support video playback.
   </video>
 </body>
 </html>
